@@ -1,0 +1,16 @@
+@mixin media-object($item:'.m-media__item', $body:'.m-media__body', $margin:10px, $valign: false, $reverse: false) {
+  display: flex;
+  @if $valign == true {
+    align-items: center;
+  }
+  #{unquote($body)} {
+    flex: 1;
+  }
+  #{unquote($item)} {
+    margin-right: $margin;
+    @if $reverse == true {
+      order: 1;
+      margin: 0 0 0 $margin;
+    }
+  }
+}

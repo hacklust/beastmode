@@ -1,0 +1,16 @@
+*~
+*.sw*
+*.log
+*.sln
+.DS_Store
+.tmp/
+.idea/
+.sass_cache/
+.vs/
+report/
+node_modules/
+bower_components/
+build/
+dist/
+npm-debug.log
+web.config

@@ -1,0 +1,44 @@
+// usage: @include font-face(font-family, path/to/font, font-weight, font-style, eot woff2 woff);
+
+@include font-face('Gotham Rounded', '../assets/fonts/gotham-rounded/GothamRounded-Light', 200, normal);
+@include font-face('Gotham Rounded', '../assets/fonts/gotham-rounded/GothamRounded-Book', normal, normal);
+@include font-face('Gotham Rounded', '../assets/fonts/gotham-rounded/GothamRounded-Medium', 600, normal);
+@include font-face('Gotham Rounded', '../assets/fonts/gotham-rounded/GothamRounded-Bold', 800, normal);
+
+@include font-face('Open Sans', '../assets/fonts/open-sans/OpenSans-Light', 200, normal, woff);
+@include font-face('Open Sans', '../assets/fonts/open-sans/OpenSans-Regular', normal, normal, woff);
+@include font-face('Open Sans', '../assets/fonts/open-sans/OpenSans-Semibold', 600, normal, woff);
+@include font-face('Open Sans', '../assets/fonts/open-sans/OpenSans-Bold', 800, normal, woff);
+
+// font size
+
+$fs-base   : 62.5%; // not used because of rem mixin
+
+$fs-h1     : 29px;
+$fs-h2     : 24px;
+$fs-h3     : 21px;
+$fs-h4     : 17px;
+$fs-h5     : 13px;
+$fs-normal : 13px;
+$fs-small  : 10px;
+
+// font type
+
+$ff-headers : 'Gotham Rounded', sans-serif;
+$ff-default : 'Open Sans', sans-serif;
+
+
+// hack - load font immediately
+body::after,
+body::before {
+    content: '.';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    opacity: 0;
+    color: transparent;
+    font-family: $ff-headers;
+}
+body::before {
+    font-weight: 600;
+}

@@ -1,0 +1,29 @@
+/**
+ *  Do not remove this comments bellow. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+// mixins
+@import "core/styles/_mixins/_breakpoint";
+@import "core/styles/_mixins/_rem";
+@import "core/styles/_mixins/_font-face";
+@import "core/styles/_mixins/_clearfix";
+@import "core/styles/_mixins/_media-object";
+@import "core/styles/_mixins/_visually-hidden";
+
+// base
+@import "core/styles/_core/_fonts";
+@import "core/styles/_core/_colors";
+@import "core/styles/_core/_images";
+@import "core/styles/_core/_spacing";
+@import "core/styles/_core/_z-index";
+@import "core/styles/_core/_preferences";
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

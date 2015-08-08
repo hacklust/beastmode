@@ -1,0 +1,22 @@
+// define breakpoints
+
+$break-small  : 650px;
+$break-medium : 940px;
+$break-large  : 1024px;
+
+// breakpoint mixin
+
+@mixin breakpoint($point) {
+  @if $point == small {
+    @media (min-width: $break-small)  { @content; }
+  }
+  @else if $point == medium {
+    @media (min-width: $break-medium)  { @content; }
+  }
+  @else if $point == large {
+    @media (min-width: $break-large) { @content; }
+  }
+  @else if $point { // allows custom breakpoints
+    @media (min-width: $point) { @content; }
+  }
+}
